@@ -1,0 +1,21 @@
+####################################
+#### NEW CONTENT ELEMENT WIZARD ####
+####################################
+
+mod.wizards.newContentElement.wizardItems {
+  // add the content elementS to the tab "plugins"
+  plugins {
+    elements {
+      ucph_ce_phonebook {
+        iconIdentifier = ucph-ce-phonebook-icon
+        title = LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang_be.xlf:title
+        description = LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang_be.xlf:description
+        tt_content_defValues {
+          CType = list
+          list_type = kuphonebook_pi1
+        }
+      }
+    }
+    show := addToList(kuphonebook_pi1)
+  }
+}

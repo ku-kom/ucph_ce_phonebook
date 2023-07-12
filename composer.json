@@ -1,0 +1,20 @@
+{
+    "name": "university-of-copenhagen/ucph-ce-phonebook",
+    "type": "typo3-cms-extension",
+    "description": "Phonebook for UCPH employees",
+    "homepage": "https://www.ku.dk/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "UniversityOfCopenhagen\\UcphCePhonebook\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ucph_ce_phonebook"
+        }
+    }
+}

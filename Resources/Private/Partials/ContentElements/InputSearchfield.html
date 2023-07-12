@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="ucph-ce-phonebook-wrapper">
+    <f:if condition="{data.header}">
+        <h2 class="ucph-ce-phonebook-header {data.header_position}"><span>{data.header}</span></h2>
+    </f:if>
+    <f:form id="ucph-ce-phonebook">
+        <div class="input-group mb-3">
+            <label for="kuPhonebook" class="visually-hidden">
+                <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_label" />
+            </label>
+            <f:form.textfield type="search" name="query" id="kuPhonebook" placeholder="{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_placeholder')}" class="form-control" additionalAttributes="{required: 'required'}" value="{query}" />
+            <f:form.button aria="{label: '{f:translate(key:\'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_clear\')}'}" class="btn btn-outline-secondary bi bi-x-lg inactive" id="reset" type="button">
+                <span aria-hidden="true" class="visually-hidden">
+                    <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_clear" />
+                </span>
+            </f:form.button>
+            <f:form.button id="query_kuPhonebook" class="btn btn-primary">
+                <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_search" />
+            </f:form.button>
+        </div>
+    </f:form>
+    
+    <div id="ucph-ce-phonebook-results">
+        <f:flashMessages as="flashMessages">
+            <dl class="messages">
+                <f:for each="{flashMessages}" as="flashMessage">
+                    <dt>{flashMessage.code}</dt>
+                    <dd>{flashMessage.message}</dd>
+                </f:for>
+            </dl>
+        </f:flashMessages>
+        <f:if condition="{query}">
+            <f:if condition="{employee} > 0">
+                <f:then>
+                    <f:render partial="ContentElements/PagingResults" arguments="{paging: paging, pages: pages, paginator: paginator, query: query, offsetStart: offset_start, offsetEnd: offset_end, items: items}" />
+
+                    <f:render partial="ContentElements/DisplayResults" arguments="{_all}" />
+                    
+                    <f:render partial="ContentElements/PagingResults" arguments="{paging: paging, pages: pages, paginator: paginator, query: query, offsetStart: offset_start, offsetEnd: offset_end, items: items}" />
+                </f:then>
+                <f:else>
+                    <div class="alert alert-info" role="alert">
+                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_nohits" />
+                    </div>
+                </f:else>
+            </f:if>
+        </f:if>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="EXT:ucph_ce_phonebook/Resources/Private/Language/locallang_be.xlf" date="2022-08-23UTC07:12:050"  product-name="ucph_ce_phonebook">
+        <header>
+            <authorName>Nanna Ellegaard</authorName>
+            <authorEmail>nel@adm.ku.dk</authorEmail>
+        </header>
+        <body>
+        <trans-unit id="phonebook_uri" resname="phonebook_uri">
+            <source>Webservice endpoint without parameters</source>
+        </trans-unit>
+        <trans-unit id="phonebook_itemsPerPage" resname="phonebook_itemsPerPage">
+            <source>Items per page</source>
+        </trans-unit>
+        <trans-unit id="title" resname="title">
+            <source>UCPH employee phonebook</source>
+        </trans-unit>
+        <trans-unit id="description" resname="description">
+            <source>UCPH directory of employees</source>
+        </trans-unit>
+        <trans-unit id="phonebook_label" resname="phonebook_label">
+            <source>Search by name, title, phone number or department</source>
+        </trans-unit>
+        </body>
+    </file>
+</xliff>

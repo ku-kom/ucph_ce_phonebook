@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xlf" date="2022-08-23UTC07:12:050"  product-name="ucph_ce_phonebook">
+        <header>
+            <authorName>Nanna Ellegaard</authorName>
+            <authorEmail>nel@adm.ku.dk</authorEmail>
+        </header>
+        <body>
+        <trans-unit id="phonebook_label" resname="phonebook_label">
+            <source>UCPH Employee phonebook</source>
+        </trans-unit>
+        <trans-unit id="phonebook_placeholder" resname="phonebook_placeholder">
+            <source>Search by name, title, phone number or department</source>
+        </trans-unit>
+        <trans-unit id="phonebook_search" resname="phonebook_search">
+            <source>Search</source>
+        </trans-unit>
+        <trans-unit id="phonebook_clear" resname="phonebook_clear">
+            <source>Reset</source>
+        </trans-unit>
+        <trans-unit id="phonebook_warning" resname="phonebook_warning">
+            <source>Warning</source>
+        </trans-unit>
+        <trans-unit id="phonebook_warningmsg" resname="phonebook_warningmsg">
+            <source>Error: Something went wrong, try again later.</source>
+        </trans-unit>
+        <trans-unit id="phonebook_hit" resname="phonebook_hit">
+            <source>result</source>
+        </trans-unit>
+        <trans-unit id="phonebook_hits" resname="phonebook_hits">
+            <source>results</source>
+        </trans-unit>
+        <trans-unit id="phonebook_nohits" resname="phonebook_nohits">
+            <source>No results</source>
+        </trans-unit>
+        <trans-unit id="paging.page" resname="paging.page">
+            <source>Page</source>
+        </trans-unit>
+        <trans-unit id="paging.disabled" resname="paging.disabled">
+            <source>disabled</source>
+        </trans-unit>
+        <trans-unit id="paging.first" resname="paging.first">
+            <source>First</source>
+        </trans-unit>
+        <trans-unit id="paging.previous" resname="paging.previous">
+            <source>Previous</source>
+        </trans-unit>
+        <trans-unit id="paging.next" resname="paging.next">
+            <source>Next</source>
+        </trans-unit>
+        <trans-unit id="paging.last" resname="paging.last">
+            <source>Last</source>
+        </trans-unit>
+        <trans-unit id="paging.current" resname="paging.current">
+            <source>Current</source>
+        </trans-unit>
+        <trans-unit id="paging.showing" resname="paging.showing">
+            <source>Showing</source>
+        </trans-unit>
+        <trans-unit id="paging.to" resname="paging.to">
+            <source>to</source>
+        </trans-unit>
+        <trans-unit id="paging.out-of" resname="paging.out-of">
+            <source>out of</source>
+        </trans-unit>
+         <trans-unit id="paging.name" resname="paging.name">
+            <source>Name</source>
+        </trans-unit>
+        <trans-unit id="paging.address" resname="paging.address">
+            <source>Address</source>
+        </trans-unit>
+        <trans-unit id="paging.title" resname="paging.title">
+            <source>Title</source>
+        </trans-unit>
+        <trans-unit id="paging.function" resname="paging.function">
+            <source>Function</source>
+        </trans-unit>
+         <trans-unit id="paging.profile" resname="paging.profile">
+            <source>Profile</source>
+        </trans-unit>
+        <trans-unit id="paging.research" resname="paging.research">
+            <source>Research and publications</source>
+        </trans-unit>
+        <trans-unit id="paging.unit" resname="paging.unit">
+            <source>Unit/­dept.</source>
+        </trans-unit>
+        <trans-unit id="paging.email" resname="paging.email">
+            <source>E-mail</source>
+        </trans-unit>
+        <trans-unit id="paging.cellphone" resname="paging.cellphone">
+            <source>Mobile</source>
+        </trans-unit>
+        <trans-unit id="paging.phone" resname="paging.phone">
+            <source>Phone</source>
+        </trans-unit>
+        <trans-unit id="paging.secretary" resname="paging.secretary">
+            <source>Secretary</source>
+        </trans-unit>
+        <trans-unit id="paging.website" resname="paging.website">
+            <source>Website</source>
+        </trans-unit>
+        <trans-unit id="paging.location" resname="paging.location">
+            <source>Location</source>
+        </trans-unit>
+        <trans-unit id="paging.remarks" resname="paging.remarks">
+            <source>Remarks</source>
+        </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,62 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+  
+<f:variable name="totalResults">
+  <f:if condition="{items} == 0 || {items} > 1">
+    <f:then>
+      <f:translate key="phonebook_hits" />.
+    </f:then>
+    <f:else if="{items} == 1">
+      <f:translate key="phonebook_hit" />.
+    </f:else>
+  </f:if>
+</f:variable>
+
+<div aria-live="polite" class="phonebook-feedback">
+  <div aria-atomic="true">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.showing')} {offsetStart} {f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.to')} {offsetEnd} {f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.out-of')} {items} {totalResults}</div>
+</div>
+<nav class="mt-2" aria-label="Pagination">
+  <ul class="pagination">
+    <f:if condition="{paging.previousPageNumber} && {paging.previousPageNumber} >= {paging.firstPageNumber}">
+      <f:then>
+        <li class="page-item"><a class="page-link" href="{f:uri.action(action:phonebookSearch, arguments:{currentPage: 1, query: query})}" title="{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.first')}">
+          <span class="bi bi-chevron-double-left" aria-hidden="true"></span>
+          <span class="visually-hidden">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.first')}</span>
+        </a></li>
+        <li class="page-item"><a class="page-link" href="{f:uri.action(action:phonebookSearch, arguments:{currentPage: paging.previousPageNumber, query: query})}" title="{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.previous')}">
+          <span class="bi bi-chevron-left" aria-hidden="true"></span>
+          <span class="visually-hidden">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.previous')}</span>
+        </a></li>
+      </f:then>
+      <f:else>
+        <li class="page-item disabled"><a class="page-link" aria-disabled="true"><span class="bi bi-chevron-double-left" aria-hidden="true"></span><span class="visually-hidden">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.first')} {f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.disabled')}</span></a></li>
+        <li class="page-item disabled"><a class="page-link" aria-disabled="true"><span class="bi bi-chevron-left" aria-hidden="true"></span><span class="visually-hidden">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.previous')} {f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.disabled')}</span></a></li>
+      </f:else>
+    </f:if>
+    <f:for each="{pages}" as="page">
+      <li class="page-item {f:if(condition: '{page} == {paginator.currentPageNumber}', then:'active')}"><a class="page-link" href="{f:uri.action(action:phonebookSearch, arguments:{currentPage: page, query: query})}" aria-label="{f:translate(key: 'paging.page')} {page}{f:if(condition: '{page} == {paginator.currentPageNumber}', then:' ({f:translate(key: \'paging.current\')})')}" {f:if(condition: '{page} == {paginator.currentPageNumber}' , then: ' aria-current="true"' )}>{page} <f:if condition="{page} == {paginator.currentPageNumber}">
+          <f:then>
+            <span class="visually-hidden">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.current')}</span>
+          </f:then>
+        </f:if>
+      </a></li>
+    </f:for>
+    <f:if condition="{paging.nextPageNumber} && {paging.nextPageNumber} <= {paging.lastPageNumber}">
+      <f:then>
+        <li class="page-item"><a class="page-link" href="{f:uri.action(action:phonebookSearch, arguments:{currentPage: paging.nextPageNumber, query: query})}" title="{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.next')}">
+          <span class="bi bi-chevron-right" aria-hidden="true"></span>
+          <span class="visually-hidden">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.next')}</span>
+        </a></li>
+        <li class="page-item"><a class="page-link" href="{f:uri.action(action:phonebookSearch, arguments:{currentPage: paging.lastPageNumber, query: query})}" title="{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.last')}">
+          <span class="bi bi-chevron-double-right" aria-hidden="true"></span>
+          <span class="visually-hidden">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.last')}</span>
+        </a></li>
+      </f:then>
+      <f:else>
+        <li class="page-item disabled"><a class="page-link" aria-disabled="true"><span class="bi bi-chevron-right" aria-hidden="true"></span><span class="visually-hidden">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.next')} {f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.disabled')}</span></a></li>
+        <li class="page-item disabled"><a class="page-link" aria-disabled="true"><span class="bi bi-chevron-double-right" aria-hidden="true"></span><span class="visually-hidden">{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.last')} {f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.disabled')}</span></a></li>
+      </f:else>
+    </f:if>
+  </ul>
+</nav>
+
+</html>

@@ -1,0 +1,42 @@
+######################################
+#### cType KU PHONEBOOK ##############
+######################################
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+    templateName = Default
+    templateRootPaths {
+        80 = EXT:ucph_ce_phonebook/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        80 = EXT:ucph_ce_phonebook/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        80 = EXT:ucph_ce_phonebook/Resources/Private/Layouts/ContentElements/
+    }
+}
+
+#################################
+#### MAKE PLUGIN ACT AS cTYPE ###
+#################################
+tt_content.ucph_ce_phonebook >
+tt_content.ucph_ce_phonebook =< tt_content.list.20.kuphonebook_pi1
+
+#################
+#### PLUGIN #####
+#################
+plugin.tx_kuphonebook {
+    view {
+        templateRootPaths {
+             0 = EXT:ucph_ce_phonebook/Resources/Private/Templates/
+             1 = {$plugin.tx_kuphonebook.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:ucph_ce_phonebook/Resources/Private/Partials/
+            1 = {$plugin.tx_kuphonebook.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:ucph_ce_phonebook/Resources/Private/Layouts/
+            1 = {$plugin.tx_kuphonebook.view.layoutRootPath}
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "ucph_ce_phonebook",
+    "version": "1.0.0",
+    "description": "Phonebook for UCPH employees ",
+    "main": "Resources/Public/JavaScript/Dist/ucph-ce-phonebook.min.js",
+	"scripts": {
+		"concat:js": "globcat \"Resources/Public/JavaScript/Src/**/*.js\" --output \"Resources/Public/JavaScript/Dist/ucph-ce-phonebook.js\"",
+		"lint:js": "eslint --cache --cache-location .cache/.eslintcache",
+		"minify:js": "terser \"Resources/Public/JavaScript/Dist/ucph-ce-phonebook.js\" --output \"Resources/Public/JavaScript/Dist/ucph-ce-phonebook.min.js\" --format quote_style=1 --compress passes=2 --toplevel --mangle-props --source-map \"url='ucph-ce-phonebook.min.js.map'\"",
+		"build:js": "npm-run-all lint:js && npm-run-all concat:js && npm-run-all minify:js",
+		"watch:js": "onchange \"Resources/Public/JavaScript/Src/*.js\" -- npm-run-all build:js",
+		"watch": "npm-run-all --parallel watch:*"
+	},
+    "keywords": [
+        "TYPO3",
+        "Bootstrap",
+        "PHP",
+        "JavaScript"
+    ],
+    "author": "Nanna Ellegaard",
+    "license": "ISC",
+    "devDependencies": {
+		"eslint": "^8.27.0",
+		"globcat": "^3.0.1",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
+		"terser": "^5.16.6",
+		"uglify-js": "^3.17.4"
+	}
+}
