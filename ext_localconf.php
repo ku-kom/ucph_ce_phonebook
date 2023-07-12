@@ -25,7 +25,7 @@ if ($versionInformation->getMajorVersion() < 12) {
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 ExtensionUtility::configurePlugin(
-  'ku_phonebook',
+  'ucph_ce_phonebook',
   'Pi1',
   [\UniversityOfCopenhagen\UcphCePhonebook\Controller\PhonebookController::class => 'phonebookSearch'],
   [\UniversityOfCopenhagen\UcphCePhonebook\Controller\PhonebookController::class => 'phonebookSearch']

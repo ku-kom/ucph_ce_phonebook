@@ -12,10 +12,10 @@ mod.wizards.newContentElement.wizardItems {
         description = LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang_be.xlf:description
         tt_content_defValues {
           CType = list
-          list_type = kuphonebook_pi1
+          list_type = ucphcephonebook_pi1
         }
       }
     }
-    show := addToList(kuphonebook_pi1)
+    show := addToList(ucphcephonebook_pi1)
   }
 }

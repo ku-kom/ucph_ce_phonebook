@@ -13,7 +13,7 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 call_user_func(function () {
     ExtensionUtility::registerPlugin(
-        'ku_phonebook',
+        'ucph_ce_phonebook',
         'Pi1',
         'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang_be.xlf:title',
         'ucph-ce-phonebook-icon'
@@ -21,4 +21,4 @@ call_user_func(function () {
 });
 
 // Remove default plugin fields
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['kuphonebook_pi1'] = 'recursive,pages';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['ucphcephonebook_pi1'] = 'recursive,pages';

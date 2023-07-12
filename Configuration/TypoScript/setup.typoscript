@@ -19,7 +19,7 @@ lib.contentElement {
 #### MAKE PLUGIN ACT AS cTYPE ###
 #################################
 tt_content.ucph_ce_phonebook >
-tt_content.ucph_ce_phonebook =< tt_content.list.20.kuphonebook_pi1
+tt_content.ucph_ce_phonebook =< tt_content.list.20.ucphcephonebook_pi1
 
 #################
 #### PLUGIN #####
@@ -28,15 +28,15 @@ plugin.tx_kuphonebook {
     view {
         templateRootPaths {
              0 = EXT:ucph_ce_phonebook/Resources/Private/Templates/
-             1 = {$plugin.tx_kuphonebook.view.templateRootPath}
+             1 = {$plugin.tx_ucphcephonebook.view.templateRootPath}
         }
         partialRootPaths {
             0 = EXT:ucph_ce_phonebook/Resources/Private/Partials/
-            1 = {$plugin.tx_kuphonebook.view.partialRootPath}
+            1 = {$plugin.tx_ucphcephonebook.view.partialRootPath}
         }
         layoutRootPaths {
             0 = EXT:ucph_ce_phonebook/Resources/Private/Layouts/
-            1 = {$plugin.tx_kuphonebook.view.layoutRootPath}
+            1 = {$plugin.tx_ucphcephonebook.view.layoutRootPath}
         }
     }
 }
