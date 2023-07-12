@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the package ku_phonebook.
+ * This file is part of the package ucph_ce_phonebook.
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
  * Sep 2022 Nanna Ellegaard, University of Copenhagen.
