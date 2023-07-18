@@ -10,7 +10,7 @@
 defined('TYPO3') or die('Access denied.');
 
 
-call_user_func(function ($extKey ='ucph_ce_phonebook', $contentType ='ku_phonebook') {
+call_user_func(function ($extKey ='ucph_ce_phonebook', $contentType ='ucph_ce_phonebook') {
     // Add Content Element
     if (!is_array($GLOBALS['TCA']['tt_content']['types'][$contentType] ?? false)) {
         $GLOBALS['TCA']['tt_content']['types'][$contentType] = [];
