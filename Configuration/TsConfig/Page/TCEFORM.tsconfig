@@ -3,33 +3,6 @@
 #
 TCEFORM {
     tt_content {
-        subheader {
-           types {
-                ucph_ce_phonebook {
-                    disabled = 1
-                }
-            }
-        }
-        subheader {
-           types {
-                list {
-                    disabled = 1
-                }
-            }
-        }
-        header_link {
-            types {
-                ucph_ce_phonebook {
-                    disabled = 1
-                }
-            }
-        }
-        header_link {
-           types {
-                list {
-                    disabled = 1
-                }
-            }
-        }
+
     }
 }
