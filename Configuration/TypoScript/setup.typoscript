@@ -2,9 +2,12 @@
 #### MAKE PLUGIN ACT AS cTYPE ###
 #################################
 tt_content.ucph_ce_phonebook >
-tt_content.ucph_ce_phonebook =< tt_content.list.20.ucphcephonebook_pi1
+tt_content.ucph_ce_phonebook = USER
 tt_content.ucph_ce_phonebook {
-   templateName = Default
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = UcphCePhonebook
+    pluginName = Pi1
+    templateName = Default
     templateRootPaths {
         81 = EXT:ucph_ce_phonebook/Resources/Private/Templates/
     }
