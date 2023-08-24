@@ -1,1 +1,1 @@
-@import "EXT:ucph_ce_phonebook/Configuration/TsConfig/Page/*"
+@import "EXT:ucph_content_phonebook/Configuration/TsConfig/Page/*"

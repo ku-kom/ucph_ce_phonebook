@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace UniversityOfCopenhagen\UcphCePhonebook\Controller;
+namespace UniversityOfCopenhagen\UcphContentPhonebook\Controller;
 
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
@@ -36,10 +36,10 @@ class PhonebookController extends ActionController
     public function phonebookSearchAction(int $currentPage = 1): ResponseInterface
     {
         // Webservive endpoint url is set in TYPO3 > Admin Tools > Settings > Extension Configuration
-        $url = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ucph_ce_phonebook', 'uri');
+        $url = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ucph_content_phonebook', 'uri');
 
         // Check settings for items per page set in TYPO3 > Admin Tools > Settings > Extension Configuration
-        $itemsPerPage = (int)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ucph_ce_phonebook', 'itemsPerPage') ?? 10;
+        $itemsPerPage = (int)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ucph_content_phonebook', 'itemsPerPage') ?? 10;
 
         // Get arguments from request
         $query = $this->request->hasArgument('query') ? (string)$this->request->getArgument('query') : '';
@@ -93,7 +93,7 @@ class PhonebookController extends ActionController
                 } else {
                     // Sisplay error message
                     $this->addFlashMessage(
-                        $this->getLanguageService()->sL('LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xlf:phonebook_warningmsg'),
+                        $this->getLanguageService()->sL('LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xlf:phonebook_warningmsg'),
                         '',
                         FlashMessage::ERROR,
                         false

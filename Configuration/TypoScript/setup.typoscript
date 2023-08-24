@@ -1,21 +1,21 @@
 #################################
 #### MAKE PLUGIN ACT AS cTYPE ###
 #################################
-tt_content.ucph_ce_phonebook >
-tt_content.ucph_ce_phonebook = USER
-tt_content.ucph_ce_phonebook {
+tt_content.ucph_content_phonebook >
+tt_content.ucph_content_phonebook = USER
+tt_content.ucph_content_phonebook {
     userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-    extensionName = UcphCePhonebook
+    extensionName = UcphContentPhonebook
     pluginName = Pi1
     templateName = Default
     templateRootPaths {
-        81 = EXT:ucph_ce_phonebook/Resources/Private/Templates/
+        81 = EXT:ucph_content_phonebook/Resources/Private/Templates/
     }
     partialRootPaths {
-        81 = EXT:ucph_ce_phonebook/Resources/Private/Partials/
+        81 = EXT:ucph_content_phonebook/Resources/Private/Partials/
     }
     layoutRootPaths {
-        81 = EXT:ucph_ce_phonebook/Resources/Private/Layouts/
+        81 = EXT:ucph_content_phonebook/Resources/Private/Layouts/
     } 
 }
 
@@ -25,15 +25,15 @@ tt_content.ucph_ce_phonebook {
 plugin.tx_ucphcephonebook {
     view {
         templateRootPaths {
-             0 = EXT:ucph_ce_phonebook/Resources/Private/Templates/
+             0 = EXT:ucph_content_phonebook/Resources/Private/Templates/
              1 = {$plugin.tx_ucphcephonebook.view.templateRootPath}
         }
         partialRootPaths {
-            0 = EXT:ucph_ce_phonebook/Resources/Private/Partials/
+            0 = EXT:ucph_content_phonebook/Resources/Private/Partials/
             1 = {$plugin.tx_ucphcephonebook.view.partialRootPath}
         }
         layoutRootPaths {
-            0 = EXT:ucph_ce_phonebook/Resources/Private/Layouts/
+            0 = EXT:ucph_content_phonebook/Resources/Private/Layouts/
             1 = {$plugin.tx_ucphcephonebook.view.layoutRootPath}
         }
     }

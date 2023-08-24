@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the package ucph_ce_phonebook.
+ * This file is part of the package ucph_content_phonebook.
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
  * Sep 2022 Nanna Ellegaard, University of Copenhagen.
@@ -10,7 +10,7 @@
 defined('TYPO3') or die('Access denied.');
 
 
-call_user_func(function ($extKey ='ucph_ce_phonebook', $contentType ='ucph_ce_phonebook') {
+call_user_func(function ($extKey ='ucph_content_phonebook', $contentType ='ucph_content_phonebook') {
     // Add Content Element
     if (!is_array($GLOBALS['TCA']['tt_content']['types'][$contentType] ?? false)) {
         $GLOBALS['TCA']['tt_content']['types'][$contentType] = [];

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the package ucph_ce_phonebook.
+ * This file is part of the package ucph_content_phonebook.
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
  */
@@ -16,7 +16,7 @@ $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
 // Only include page.tsconfig if TYPO3 version is below 12 so that it is not imported twice.
 if ($versionInformation->getMajorVersion() < 12) {
   ExtensionManagementUtility::addPageTSConfig('
-      @import "EXT:ucph_ce_phonebook/Configuration/page.tsconfig"
+      @import "EXT:ucph_content_phonebook/Configuration/page.tsconfig"
    ');
 }
 
@@ -25,11 +25,11 @@ if ($versionInformation->getMajorVersion() < 12) {
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 ExtensionUtility::configurePlugin(
-  'ucph_ce_phonebook',
+  'ucph_content_phonebook',
   'Pi1',
-  [\UniversityOfCopenhagen\UcphCePhonebook\Controller\PhonebookController::class => 'phonebookSearch'],
-  [\UniversityOfCopenhagen\UcphCePhonebook\Controller\PhonebookController::class => 'phonebookSearch']
+  [\UniversityOfCopenhagen\UcphContentPhonebook\Controller\PhonebookController::class => 'phonebookSearch'],
+  [\UniversityOfCopenhagen\UcphContentPhonebook\Controller\PhonebookController::class => 'phonebookSearch']
 );
 
 // KU phonebook Viewhelper namespace
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['kuPhonebook'] = ['UniversityOfCopenhagen\UcphCePhonebook\ViewHelpers'];
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['kuPhonebook'] = ['UniversityOfCopenhagen\UcphContentPhonebook\ViewHelpers'];

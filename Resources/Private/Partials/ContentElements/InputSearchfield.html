@@ -6,16 +6,16 @@
     <f:form id="ucph-ce-phonebook">
         <div class="input-group mb-3">
             <label for="kuPhonebook" class="visually-hidden">
-                <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_label" />
+                <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:phonebook_label" />
             </label>
-            <f:form.textfield type="search" name="query" id="kuPhonebook" placeholder="{f:translate(key:'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_placeholder')}" class="form-control" additionalAttributes="{required: 'required'}" value="{query}" />
-            <f:form.button aria="{label: '{f:translate(key:\'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_clear\')}'}" class="btn btn-outline-secondary bi bi-x-lg inactive" id="reset" type="button">
+            <f:form.textfield type="search" name="query" id="kuPhonebook" placeholder="{f:translate(key:'LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:phonebook_placeholder')}" class="form-control" additionalAttributes="{required: 'required'}" value="{query}" />
+            <f:form.button aria="{label: '{f:translate(key:\'LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:phonebook_clear\')}'}" class="btn btn-outline-secondary bi bi-x-lg inactive" id="reset" type="button">
                 <span aria-hidden="true" class="visually-hidden">
-                    <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_clear" />
+                    <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:phonebook_clear" />
                 </span>
             </f:form.button>
             <f:form.button id="query_kuPhonebook" class="btn btn-primary">
-                <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_search" />
+                <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:phonebook_search" />
             </f:form.button>
         </div>
     </f:form>
@@ -40,7 +40,7 @@
                 </f:then>
                 <f:else>
                     <div class="alert alert-info" role="alert">
-                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:phonebook_nohits" />
+                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:phonebook_nohits" />
                     </div>
                 </f:else>
             </f:if>

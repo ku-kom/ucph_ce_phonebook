@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the package ucph_ce_phonebook.
+ * This file is part of the package ucph_content_phonebook.
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
  * Sep 2022 Nanna Ellegaard, University of Copenhagen.
@@ -13,9 +13,9 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 call_user_func(function () {
     ExtensionUtility::registerPlugin(
-        'ucph_ce_phonebook',
+        'ucph_content_phonebook',
         'Pi1',
-        'LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang_be.xlf:title',
+        'LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang_be.xlf:title',
         'ucph-ce-phonebook-icon'
     );
 });

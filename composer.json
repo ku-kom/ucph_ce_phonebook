@@ -1,5 +1,5 @@
 {
-    "name": "university-of-copenhagen/ucph-ce-phonebook",
+    "name": "university-of-copenhagen/ucph-content-phonebook",
     "type": "typo3-cms-extension",
     "description": "Phonebook for UCPH employees",
     "homepage": "https://www.ku.dk/",
@@ -9,12 +9,12 @@
     },
     "autoload": {
         "psr-4": {
-            "UniversityOfCopenhagen\\UcphCePhonebook\\": "Classes/"
+            "UniversityOfCopenhagen\\UcphContentPhonebook\\": "Classes/"
         }
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "ucph_ce_phonebook"
+            "extension-key": "ucph_content_phonebook"
         }
     }
 }

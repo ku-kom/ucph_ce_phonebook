@@ -9,40 +9,40 @@
                         <div class="col-12 col-sm-8">
                             <div class="row staff-details">
                                 <div class="col-12 col-sm-2">
-                                    <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.name" />
+                                    <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.name" />
                                 </div>
                                 <div class="col-12 col-sm-10">{item.PERSON_FORNAVN} {item.PERSON_EFTERNAVN}</div>
                                 <f:if condition="{item.ANSAT_UOFF_STIL_TEKST}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.title" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.title" />
                                     </div>
                                     <div class="col-12 col-sm-10">{item.ANSAT_UOFF_STIL_TEKST}</div>
                                 </f:if>
                                 <f:if condition="{item.ANSAT_FUNKTION}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.function" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.function" />
                                     </div>
                                     <div class="col-12 col-sm-10">{item.ANSAT_FUNKTION}</div>
                                 </f:if>
                                 <f:if condition="{item.ANSAT_PURE_DK}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.profile" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.profile" />
                                     </div>
                                     <div class="col-12 col-sm-10">
                                         <a href="{item.ANSAT_PURE_DK}">
-                                            <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.research" />
+                                            <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.research" />
                                         </a>
                                     </div>
                                 </f:if>
                                 <f:if condition="{item.STED_NAVN_SAMLET}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.unit" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.unit" />
                                     </div>
                                     <div class="col-12 col-sm-10">{item.STED_NAVN_SAMLET}</div>
                                 </f:if>
                                 <f:if condition="{item.ANSAT_ARB_EMAIL}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.email" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.email" />
                                     </div>
                                     <div class="col-12 col-sm-10">
                                         <f:link.email email="{item.ANSAT_ARB_EMAIL}">{item.ANSAT_ARB_EMAIL}</f:link.email>
@@ -50,21 +50,21 @@
                                 </f:if>
                                 <f:if condition="{item.ANSAT_MOBIL}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.cellphone" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.cellphone" />
                                     </div>
                                     <div class="col-12 col-sm-10"><a href="tel:{item.ANSAT_MOBIL}">
                                             <kuPhonebook:Format.PhoneNumber phoneNumber="{item.ANSAT_MOBIL}" /></a></div>
                                 </f:if>
                                 <f:if condition="{item.ANSAT_ARB_TLF}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.phone" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.phone" />
                                     </div>
                                     <div class="col-12 col-sm-10"><a href="tel:{item.ANSAT_ARB_TLF}">
                                             <kuPhonebook:Format.PhoneNumber phoneNumber="{item.ANSAT_ARB_TLF}" /></a></div>
                                 </f:if>
                                 <f:if condition="{item.ANSAT_TLF_SEKR}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.secretary" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.secretary" />
                                     </div>
                                     <div class="col-12 col-sm-10">
                                         <a href="tel:{item.ANSAT_TLF_SEKR}">
@@ -74,25 +74,25 @@
                                 </f:if>
                                 <f:if condition="{item.ANSAT_WWW}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.website" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.website" />
                                     </div>
                                     <div class="col-12 col-sm-10"><a href="{item.ANSAT_WWW}">{item.ANSAT_WWW}</a></div>
                                 </f:if>
                                 <f:if condition="{item.ANSAT_ADRESSE}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.adivress" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.adivress" />
                                     </div>
                                     <div class="col-12 col-sm-10">{item.ANSAT_ADRESSE}</div>
                                 </f:if>
                                 <f:if condition="{item.LOKATION}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.location" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.location" />
                                     </div>
                                     <div class="col-12 col-sm-10">{item.LOKATION}</div>
                                 </f:if>
                                 <f:if condition="{item.BEMAERK}">
                                     <div class="col-12 col-sm-2">
-                                        <f:translate key="LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang.xml:paging.remarks" />
+                                        <f:translate key="LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang.xml:paging.remarks" />
                                     </div>
                                     <div class="col-12 col-sm-10">{item.BEMAERK}</div>
                                 </f:if>

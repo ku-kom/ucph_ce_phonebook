@@ -6,15 +6,15 @@ mod.wizards.newContentElement.wizardItems {
   // add the content elementS to the tab "plugins"
   special {
     elements {
-      ucph_ce_phonebook {
+      ucph_content_phonebook {
         iconIdentifier = ucph-ce-phonebook-icon
-        title = LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang_be.xlf:title
-        description = LLL:EXT:ucph_ce_phonebook/Resources/Private/Language/locallang_be.xlf:description
+        title = LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang_be.xlf:title
+        description = LLL:EXT:ucph_content_phonebook/Resources/Private/Language/locallang_be.xlf:description
         tt_content_defValues {
-          CType = ucph_ce_phonebook
+          CType = ucph_content_phonebook
         }
       }
     }
-    show := addToList(ucph_ce_phonebook)
+    show := addToList(ucph_content_phonebook)
   }
 }

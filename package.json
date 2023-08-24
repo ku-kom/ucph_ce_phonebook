@@ -1,5 +1,5 @@
 {
-    "name": "ucph_ce_phonebook",
+    "name": "ucph_content_phonebook",
     "version": "1.0.0",
     "description": "Phonebook for UCPH employees ",
     "main": "Resources/Public/JavaScript/Dist/ucph-ce-phonebook.min.js",
